@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: flight
-  name: flight-deploy
+    app: fashion
+  name: fashion-deploy
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: flight
+      app: fashion
   template:
     metadata:
       labels:
-        app: flight
+        app: fashion
     spec:
       containers:
       - name: cont1
-        image: challasaichandana2000/flight:latest
+        image: challasaichandana2000/fashion:latest
         ports:
           - containerPort: 80
 ---
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: flight
+    app: fashion
   ports:
     - port: 80
       targetPort: 80
