@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: challasaichandana2000/flight
+        image: challasaichandana2000/flight:latest
         ports:
           - containerPort: 80
 ---
